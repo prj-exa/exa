@@ -1,0 +1,27 @@
+{
+  "editor.tabSize": 2,
+  "editor.rulers": [80, 120],
+  "editor.insertSpaces": true,
+  "editor.renderWhitespace": "all",
+  "editor.trimAutoWhitespace": true,
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingDelete": "never",
+  "editor.autoClosingOvertype": "never",
+  "editor.autoClosingBrackets": "never",
+  "editor.renderFinalNewline": "dimmed",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+
+  "files.encoding": "utf8",
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.h": "c",
+    "*.c:": "c",
+    "*.h.in": "cmake",
+    "charconv": "c"
+  },
+
+  "cmake.useCMakePresets": "always"
+}

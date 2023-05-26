@@ -1,0 +1,49 @@
+{
+  "Include guard": {
+    "prefix": "#ig",
+    "body": [
+      "#ifndef ${1:FileName}_H",
+      "#define ${1:FileName}_H 1",
+      "",
+      "$0",
+      "",
+      "#endif /* !${1:FileName}_H */",
+      ""
+    ],
+  },
+  "Extern C": {
+    "prefix": "#cpp",
+    "body": [
+      "#ifdef __cplusplus",
+      "extern \"C\" {",
+      "#endif /* !__cplusplus */ ",
+      "",
+      "$0",
+      "",
+      "#ifdef __cplusplus",
+      "}",
+      "#endif /* !__cplusplus */ ",
+    ]
+  },
+  "Base C header content.": {
+    "prefix": "#cc",
+    "body": [
+      "#ifndef ${1:FileName}_H",
+      "#define ${1:FileName}_H 1",
+      "",
+      "#ifdef __cplusplus",
+      "extern \"C\" {",
+      "#endif /* !__cplusplus */",
+      "",
+      "$0",
+      "",
+      "#ifdef __cplusplus",
+      "}",
+      "#endif /* !__cplusplus */",
+      "",
+      "#endif /* !${1:FileName}_H*/",
+      ""
+    ],
+    "description": "Base C header content."
+  }
+}

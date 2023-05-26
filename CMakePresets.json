@@ -1,0 +1,57 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 25,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "defualt",
+      "hidden": true,
+      "binaryDir": "build"
+    },
+    {
+      "name": "windows-default",
+      "hidden": true,
+      "generator": "Visual Studio 17 2022",
+      "inherits": [ "defualt" ],
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+    {
+      "name": "linux-default",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "inherits": [ "defualt" ],
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+
+    {
+      "name": "Linux",
+      "displayName": "Linux",
+      "inherits":[ "linux-default" ],
+      "binaryDir": "build/Linux"
+    },
+
+    {
+      "name": "Windows-x86_64",
+      "displayName": "Windows x64",
+      "inherits":[ "windows-default" ],
+      "binaryDir": "build/Windows/x86_64"
+    },
+    {
+      "name": "Windows-x86",
+      "displayName": "Windows x86",
+      "inherits":[ "windows-default" ],
+      "binaryDir": "build/Windows/x86"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cmake",
+      "label": "CMake: build",
+      "command": "build",
+      "targets": [
+        "all"
+      ],
+      "preset": "${command:cmake.activeBuildPresetName}",
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "CMake build"
+    },
+    {
+      "type": "cmake",
+      "label": "CMake: configure",
+      "command": "configure",
+      "group": "build",
+      "preset": "${command:cmake.activeConfigurePresetName}",
+      "detail": "CMake configure"
+    },
+    {
+      "type": "cmake"  ,
+      "label": "CMake install",
+      "command": "install",
+      "targets": [ "all" ],
+      "preset": "${command:cmake.activeInstallPresetName}",
+      "group": "build",
+      "detail": "CMake install"
+    },
+    {
+      "type": "cmake",
+      "label": "CMake: clean rebuild",
+      "command": "cleanRebuild",
+			"targets": [ "all" ],
+      "group": "build",
+      "preset": "${command:cmake.activeBuildPresetName}",
+      "detail": "CMake: clean rebuild"
+    }
+  ]
+}

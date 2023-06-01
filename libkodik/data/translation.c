@@ -79,7 +79,7 @@ kodik_translation_new_json(json_t const *node) {
       and kodik_json_check(j_type, string)
       and kodik_json_check(j_id, integer)) {
     title = json_string_value(j_title);
-    type = json_string_value(j_type);
+    type  = json_string_value(j_type);
     id = json_integer_value(j_id);
     translation = kodik_translation_new_value(title, type, id);
   }

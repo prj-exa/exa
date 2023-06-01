@@ -1,4 +1,4 @@
-add_library ("kodik" MODULE)
+add_library (kodik)
 
 include(CheckIncludeFile)
 
@@ -41,3 +41,4 @@ target_include_directories (kodik
     "${CMAKE_CURRENT_BINARY_DIR}")
 
 configure_file (config.h.in config.h @ONLY)
+target_link_libraries (kodik PRIVATE jansson::jansson)

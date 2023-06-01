@@ -23,5 +23,6 @@
     "charconv": "c"
   },
 
-  "cmake.useCMakePresets": "always"
+  "cmake.useCMakePresets": "always",
+  "mesonbuild.configureOnOpen": false
 }
